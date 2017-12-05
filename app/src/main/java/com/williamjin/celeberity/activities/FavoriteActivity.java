@@ -1,11 +1,12 @@
 package com.williamjin.celeberity.activities;
 
+import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.williamjin.celeberity.R;
 
-public class FavoriteActivity extends AppCompatActivity {
+public class FavoriteActivity extends ListActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
