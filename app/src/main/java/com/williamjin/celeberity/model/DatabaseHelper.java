@@ -117,7 +117,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<Celebrity> getFavorites() {
-
-        return null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        List<Celebrity> celebrityList = new ArrayList<>();
+        String command = "SELECT * FROM " + CelebrityEntry.TABLE_NAME + " WHERE favorite = " + 1 + ";";
+        Cursor cursor = db.rawQuery(command, null);
+        if (cursor.moveToFirst()) {
+            do {
+                Boolean isFavorite = cursor.getInt(4) > 0;
+                celebrityList.add(new Celebrity(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2).charAt(0),
+                        cursor.getString(3),
+                        isFavorite
+                ));
+            } while (cursor.moveToNext());
+        }
+        return celebrityList;
     }
 }

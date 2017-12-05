@@ -20,14 +20,18 @@
             android:id="@+id/nav_modify"
             android:icon="@drawable/ic_mode_edit_black_24dp"
             android:title="Modify" />
+        <item
+                android:id="@+id/nav_favorite"
+                android:icon="@drawable/ic_favorite_black"
+                android:title="Favorite" />
     </group>
 
     <item android:title="Other">
         <menu>
             <item
-                android:id="@+id/nav_favorite"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Favorite" />
+                android:id="@+id/nav_review"
+                android:icon="@drawable/ic_rate_review_black_24dp"
+                android:title="Review" />
         </menu>
     </item>
 

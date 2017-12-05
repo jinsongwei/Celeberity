@@ -76,12 +76,37 @@
             android:layout_height="wrap_content"
             android:hint="type" />
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <ImageButton
+            android:id="@+id/btn_favorite"
+            android:onClick="handleFavoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_favorite_red" />
+
+        <ImageButton
+            android:onClick="handleFavoriteButton"
+            android:id="@+id/btn_unfavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_favorite_black" />
+    </LinearLayout>
+
         <Button
             android:id="@+id/btn_modify_celebrity"
             android:onClick="handleModifyCelebrity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize="30dp"
+            android:textColor="@android:color/holo_red_light"
             android:text="Update" />
     </LinearLayout>
 

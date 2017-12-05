@@ -34,6 +34,7 @@ public class ListCelebrityActivity extends AppCompatActivity {
                 list = new ArrayList<>();
                 for(Celebrity c : celebrityList){
                     list.add(c.toString());
+//                    Log.e("list result", c.toString() + " -- " + c.getFavorite());
                 }
                 adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.tv_list_item, list);
                 lvList.setAdapter(adapter);

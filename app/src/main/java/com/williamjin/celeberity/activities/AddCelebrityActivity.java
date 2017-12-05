@@ -13,6 +13,8 @@ import com.williamjin.celeberity.model.DatabaseMeta;
 
 public class AddCelebrityActivity extends AppCompatActivity {
 
+    private Boolean favorite = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class AddCelebrityActivity extends AppCompatActivity {
                 String gender = etGender.getText().toString();
                 if (gender.length() == 1) {
                     Celebrity c = new Celebrity(etName.getText().toString(),
-                            gender.charAt(0), etType.getText().toString(), null);
+                            gender.charAt(0), etType.getText().toString(), favorite);
                     long resCode = dbHelper.addCelebrity(c);
                     if (resCode > 0) {
                         Toast.makeText(this, "Add Successfully", Toast.LENGTH_SHORT).show();
@@ -44,6 +46,19 @@ public class AddCelebrityActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(this, "enter one character in Gender ", Toast.LENGTH_SHORT).show();
                 }
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void handleFavoriteButton(View view) {
+        switch (view.getId()) {
+            case R.id.btn_favorite:
+                favorite = true;
+                break;
+            case R.id.btn_unfavorite:
+                favorite = false;
                 break;
             default:
                 break;

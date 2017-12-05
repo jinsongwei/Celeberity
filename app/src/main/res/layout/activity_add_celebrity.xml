@@ -33,12 +33,14 @@
 
         <ImageButton
             android:id="@+id/btn_favorite"
+            android:onClick="handleFavoriteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:src="@drawable/ic_favorite_red" />
 
         <ImageButton
+            android:onClick="handleFavoriteButton"
             android:id="@+id/btn_unfavorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

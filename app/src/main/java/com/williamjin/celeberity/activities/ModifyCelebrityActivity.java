@@ -69,11 +69,24 @@ public class ModifyCelebrityActivity extends AppCompatActivity {
                         etUpdateType.getText().toString(),
                         favorite
                 ));
-                if(resCode > 0){
+                if (resCode > 0) {
                     Toast.makeText(this, "update successfully!!!", Toast.LENGTH_SHORT).show();
-                }else{
+                } else {
                     Toast.makeText(this, "update fails!", Toast.LENGTH_SHORT).show();
                 }
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void handleFavoriteButton(View view) {
+        switch (view.getId()) {
+            case R.id.btn_favorite:
+                favorite = false;
+                break;
+            case R.id.btn_unfavorite:
+                favorite = true;
                 break;
             default:
                 break;
