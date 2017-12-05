@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-
-
         //  todo change here if I have time
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +102,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_favorite) {
             Intent intent = new Intent(this, FavoriteActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_review) {
+//            Intent intent = new Intent(this, ReviewActivity.class);
+            Intent intent = new Intent(this, ReviewCelebrityActivity.class);
             startActivity(intent);
         }
 

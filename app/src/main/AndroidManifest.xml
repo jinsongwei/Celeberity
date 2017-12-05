@@ -24,7 +24,8 @@
         <activity android:name=".activities.RemoveCelebrityActivity" />
         <activity android:name=".activities.ModifyCelebrityActivity" />
         <activity android:name=".activities.FavoriteActivity" />
-        <activity android:name=".ReviewCelebrityActivity"></activity>
+        <activity android:name=".ReviewCelebrityActivity" />
+        <activity android:name=".ReviewActivity"></activity>
     </application>
 
 </manifest>
