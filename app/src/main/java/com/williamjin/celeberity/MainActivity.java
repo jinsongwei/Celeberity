@@ -107,6 +107,10 @@ public class MainActivity extends AppCompatActivity
 //            Intent intent = new Intent(this, ReviewActivity.class);
             Intent intent = new Intent(this, ReviewCelebrityActivity.class);
             startActivity(intent);
+        } else if (id == R.id.nav_review_test) {
+//            Intent intent = new Intent(this, ReviewActivity.class);
+            Intent intent = new Intent(this, ReviewActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
